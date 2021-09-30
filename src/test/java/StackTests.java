@@ -1,6 +1,7 @@
 
 import static org.junit.Assert.*;
 
+import org.junit.AfterClass;
 //import org.junit.Assert;
 import org.junit.Before;
 import org.junit.BeforeClass;
@@ -84,6 +85,13 @@ public class StackTests {
 		for(int i = Stackwithlinkedlist.getSize()-1; i>=0; i--) {
 			assertEquals(i,Stackwithlinkedlist.pop());
 		}
+	}
+	@AfterClass
+	public static void destructor() {
+		size = 0;
+		m = null;
+	     s1 = null;
+		 s2 = null;
 	}
    
     
